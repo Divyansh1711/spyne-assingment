@@ -1,0 +1,23 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: follow-Service
+  config:
+    import: configserver:http://localhost:9296
+  security:
+    basic:
+      enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://abhi:3306/spynefollowservice
+    username: abhi
+    password: abhi
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # Uncomment the following line to enable SQL logging
+  # jpa.show-sql: true
+
+

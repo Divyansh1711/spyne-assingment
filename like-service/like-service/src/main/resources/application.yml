@@ -1,0 +1,23 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: like-Service
+  config:
+    import: configserver:http://localhost:9296
+  security:
+    basic:
+      enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://abhi:3306/spyneLikeService
+    username: abhi
+    password: abhi
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  # Uncomment the following line to enable SQL logging
+  # jpa.show-sql: true
+
+
